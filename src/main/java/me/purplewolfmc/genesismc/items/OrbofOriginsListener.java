@@ -1,30 +1,25 @@
-package me.purplewolfmc.originsspigotmc.items;
+package me.purplewolfmc.genesismc.items;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.Sound;
 import org.bukkit.enchantments.Enchantment;
-import org.bukkit.entity.Item;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
-import org.bukkit.event.player.PlayerDropItemEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.PlayerInventory;
 import org.bukkit.inventory.meta.ItemMeta;
 
-import java.net.http.WebSocket;
 import java.util.ArrayList;
 import java.util.List;
 
-import static me.purplewolfmc.originsspigotmc.items.OrbOfOrigins.orb;
+import static me.purplewolfmc.genesismc.items.OrbOfOrigins.orb;
 import static org.bukkit.ChatColor.LIGHT_PURPLE;
-import static org.bukkit.Material.AIR;
 import static org.bukkit.Material.ENDER_PEARL;
 
 public class OrbofOriginsListener implements Listener {

@@ -1,6 +1,6 @@
-package me.purplewolfmc.originsspigotmc.commands.subcommands;
+package me.purplewolfmc.genesismc.commands.subcommands;
 
-import me.purplewolfmc.originsspigotmc.items.OrbOfOrigins;
+import me.purplewolfmc.genesismc.items.OrbOfOrigins;
 import org.bukkit.entity.Player;
 
 public class BetaOrbOrigins extends SubCommand{

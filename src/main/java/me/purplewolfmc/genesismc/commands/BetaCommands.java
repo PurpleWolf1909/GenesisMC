@@ -1,7 +1,7 @@
-package me.purplewolfmc.originsspigotmc.commands;
+package me.purplewolfmc.genesismc.commands;
 
-import me.purplewolfmc.originsspigotmc.commands.subcommands.BetaOrbOrigins;
-import me.purplewolfmc.originsspigotmc.commands.subcommands.SubCommand;
+import me.purplewolfmc.genesismc.commands.subcommands.BetaOrbOrigins;
+import me.purplewolfmc.genesismc.commands.subcommands.SubCommand;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;

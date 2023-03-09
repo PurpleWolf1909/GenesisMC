@@ -1,4 +1,4 @@
-package me.purplewolfmc.originsspigotmc.origins.human;
+package me.purplewolfmc.genesismc.origins.human;
 
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;

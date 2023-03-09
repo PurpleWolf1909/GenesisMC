@@ -1,4 +1,4 @@
-package me.purplewolfmc.originsspigotmc.items;
+package me.purplewolfmc.genesismc.items;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Material;

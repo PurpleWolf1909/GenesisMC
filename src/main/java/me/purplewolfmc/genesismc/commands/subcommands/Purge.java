@@ -1,10 +1,8 @@
-package me.purplewolfmc.originsspigotmc.commands.subcommands;
+package me.purplewolfmc.genesismc.commands.subcommands;
 
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
-
-import java.net.http.WebSocket;
 
 public class Purge extends SubCommand implements Listener {
     @Override

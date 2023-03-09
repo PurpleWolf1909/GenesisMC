@@ -1,8 +1,7 @@
-package me.purplewolfmc.originsspigotmc.commands;
+package me.purplewolfmc.genesismc.commands;
 
-import me.purplewolfmc.originsspigotmc.commands.subcommands.OriginsChoosing;
-import me.purplewolfmc.originsspigotmc.commands.subcommands.Purge;
-import me.purplewolfmc.originsspigotmc.commands.subcommands.SubCommand;
+import me.purplewolfmc.genesismc.commands.subcommands.GenesisChoosing;
+import me.purplewolfmc.genesismc.commands.subcommands.SubCommand;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -10,13 +9,13 @@ import org.bukkit.entity.Player;
 
 import java.util.ArrayList;
 
-public class OriginsOP implements CommandExecutor {
+public class GenesisCommandManager implements CommandExecutor {
 
     //key = uuid of player
     //long = epoch time of when ran command
     private ArrayList<SubCommand> subCommands = new ArrayList<>();
-    public OriginsOP(){
-        subCommands.add(new Purge());
+    public GenesisCommandManager(){
+        subCommands.add(new GenesisChoosing());
     }
 
     @Override
@@ -34,7 +33,7 @@ public class OriginsOP implements CommandExecutor {
         }
         return true;
     }
-    public ArrayList<SubCommand> getSubCommands(){
+public ArrayList<SubCommand> getSubCommands(){
         return subCommands;
-    }
+}
 }

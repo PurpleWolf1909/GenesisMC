@@ -1,4 +1,4 @@
-package me.purplewolfmc.originsspigotmc.commands.subcommands;
+package me.purplewolfmc.genesismc.commands.subcommands;
 
 import org.bukkit.entity.Player;
 

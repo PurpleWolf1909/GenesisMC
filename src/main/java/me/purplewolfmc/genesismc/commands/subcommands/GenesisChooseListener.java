@@ -1,6 +1,6 @@
-package me.purplewolfmc.originsspigotmc.commands.subcommands;
+package me.purplewolfmc.genesismc.commands.subcommands;
 
-import me.purplewolfmc.originsspigotmc.items.OrbOfOrigins;
+import me.purplewolfmc.genesismc.items.OrbOfOrigins;
 import org.bukkit.*;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
@@ -16,11 +16,11 @@ import java.net.http.WebSocket;
 import java.util.ArrayList;
 import java.util.List;
 
-import static me.purplewolfmc.originsspigotmc.items.OrbOfOrigins.orb;
+import static me.purplewolfmc.genesismc.items.OrbOfOrigins.orb;
 import static org.bukkit.ChatColor.LIGHT_PURPLE;
 import static org.bukkit.Material.ENDER_PEARL;
 
-public class OriginsChooseListener implements WebSocket.Listener, Listener {
+public class GenesisChooseListener implements WebSocket.Listener, Listener {
     //Orb of Origin Click Event
 
     //Menu Click Event Check
@@ -182,7 +182,6 @@ public class OriginsChooseListener implements WebSocket.Listener, Listener {
 
                 ItemStack[] allmenu_items = {human, enderian, shulker, arachnid, creep, phantom, slimeling, vexian, blazeborn, starborne, mermaid, witch, rabbit, bumblebee, elytrian, avian, piglin, dragonborne};
                 allmenu.setContents(allmenu_items);
-
                 p.openInventory(allmenu);
             } else {
                 e.setCancelled(true);

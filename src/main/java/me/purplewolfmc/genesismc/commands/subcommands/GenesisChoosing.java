@@ -1,4 +1,4 @@
-package me.purplewolfmc.originsspigotmc.commands.subcommands;
+package me.purplewolfmc.genesismc.commands.subcommands;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -10,7 +10,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 
 import java.util.ArrayList;
 
-public class OriginsChoosing extends SubCommand {
+public class GenesisChoosing extends SubCommand {
     @Override
     public String getName() {
         return "choose";

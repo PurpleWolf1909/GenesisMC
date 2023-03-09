@@ -1,16 +1,16 @@
-name: OriginsSpigotMC
+name: GenesisMC
 version: '${version}'
-main: me.purplewolfmc.originsspigotmc.OriginsSpigotMC
+main: me.purplewolfmc.genesismc.GenesisSpigotMC
 api-version: 1.19
 authors: [ PurpleWolfMC ]
-description: Origins Plugin for SpigotMC
+description: Genesis Plugin for SpigotMC
 website: https://twitch.tv/PurpleWolfMC
 commands:
   origins:
     description: Main Origins Directory
   origins-op:
-    permission: purplewolf.origins.spigotmc.op
-    description: operator command for origins
+    permission: purplewolf.genesismc.spigotmc.op
+    description: operator command for genesismc
   beta:
-    description: origins beta
-    permission: purplewolf.origins.spigotmc.beta
+    description: genesis beta
+    permission: purplewolf.genesismc.spigotmc.beta

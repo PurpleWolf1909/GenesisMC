@@ -1,4 +1,4 @@
-package me.purplewolfmc.originsspigotmc.items;
+package me.purplewolfmc.genesismc.items;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -9,8 +9,6 @@ import org.bukkit.inventory.meta.ItemMeta;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static org.bukkit.Material.ENDER_PEARL;
 
 public class InfinPearl {
 

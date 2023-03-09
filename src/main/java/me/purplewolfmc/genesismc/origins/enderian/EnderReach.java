@@ -1,4 +1,4 @@
-package me.purplewolfmc.originsspigotmc.origins.enderian;
+package me.purplewolfmc.genesismc.origins.enderian;
 
 import org.bukkit.event.Listener;
 

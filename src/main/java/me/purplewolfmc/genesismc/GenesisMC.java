@@ -1,57 +1,56 @@
-package me.purplewolfmc.originsspigotmc;
+package me.purplewolfmc.genesismc;
 
-import me.purplewolfmc.originsspigotmc.commands.BetaCommands;
-import me.purplewolfmc.originsspigotmc.commands.OriginsCommandManager;
-import me.purplewolfmc.originsspigotmc.commands.OriginsOP;
-import me.purplewolfmc.originsspigotmc.commands.subcommands.OriginsChooseListener;
-import me.purplewolfmc.originsspigotmc.commands.subcommands.Purge;
-import me.purplewolfmc.originsspigotmc.items.OrbOfOrigins;
-import me.purplewolfmc.originsspigotmc.items.OrbofOriginsListener;
-import me.purplewolfmc.originsspigotmc.origins.enderian.*;
-import me.purplewolfmc.originsspigotmc.origins.human.HumanMain;
+import me.purplewolfmc.genesismc.commands.BetaCommands;
+import me.purplewolfmc.genesismc.commands.GenesisCommandManager;
+import me.purplewolfmc.genesismc.commands.GenesisOP;
+import me.purplewolfmc.genesismc.commands.subcommands.GenesisChooseListener;
+import me.purplewolfmc.genesismc.commands.subcommands.Purge;
+import me.purplewolfmc.genesismc.items.OrbOfOrigins;
+import me.purplewolfmc.genesismc.items.OrbofOriginsListener;
+import me.purplewolfmc.genesismc.origins.enderian.EnderMain;
+import me.purplewolfmc.genesismc.origins.enderian.EnderReach;
+import me.purplewolfmc.genesismc.origins.enderian.EnderTeleport;
+import me.purplewolfmc.genesismc.origins.enderian.EnderWater;
+import me.purplewolfmc.genesismc.origins.human.HumanMain;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Material;
-import org.bukkit.block.Biome;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.event.EventHandler;
-import org.bukkit.scheduler.BukkitTask;
 
-import java.util.List;
+public final class GenesisMC extends JavaPlugin implements Listener {
 
-public final class OriginsSpigotMC extends JavaPlugin implements Listener {
-
-    public OriginsSpigotMC() {
+    public GenesisMC() {
     }
 
     @Override
     public void onEnable() {
 // Plugin startup logic
 
-        getServer().getConsoleSender().sendMessage(ChatColor.DARK_RED + "[OriginsSpigotMC]              ____");
-        getServer().getConsoleSender().sendMessage(ChatColor.RED + "[OriginsSpigotMC]  ___        |    |   ___  [*]");
-        getServer().getConsoleSender().sendMessage(ChatColor.YELLOW + "[OriginsSpigotMC] |   | | | | |    |  |   |");
-        getServer().getConsoleSender().sendMessage(ChatColor.GREEN + "[OriginsSpigotMC] |___| | | | |____|  |___|  |");
-        getServer().getConsoleSender().sendMessage(ChatColor.AQUA + "[OriginsSpigotMC] |     | | | |    |  |      |");
-        getServer().getConsoleSender().sendMessage(ChatColor.BLUE + "[OriginsSpigotMC] |     |_|_| |    |  |      |");
-        getServer().getConsoleSender().sendMessage(ChatColor.LIGHT_PURPLE + "[OriginsSpigotMC] |           |    |  |      |");
-        getServer().getConsoleSender().sendMessage(ChatColor.DARK_PURPLE + "[OriginsSpigotMC] |                   |");
+        getServer().getConsoleSender().sendMessage(ChatColor.DARK_RED + "[GenesisMC]              ____");
+        getServer().getConsoleSender().sendMessage(ChatColor.RED + "[GenesisMC]  ___        |    |   ___  [*]");
+        getServer().getConsoleSender().sendMessage(ChatColor.YELLOW + "[GenesisMC] |   | | | | |    |  |   |");
+        getServer().getConsoleSender().sendMessage(ChatColor.GREEN + "[GenesisMC] |___| | | | |____|  |___|  |");
+        getServer().getConsoleSender().sendMessage(ChatColor.AQUA + "[GenesisMC] |     | | | |    |  |      |");
+        getServer().getConsoleSender().sendMessage(ChatColor.BLUE + "[GenesisMC] |     |_|_| |    |  |      |");
+        getServer().getConsoleSender().sendMessage(ChatColor.LIGHT_PURPLE + "[GenesisMC] |           |    |  |      |");
+        getServer().getConsoleSender().sendMessage(ChatColor.DARK_PURPLE + "[GenesisMC] |                   |");
         getServer().getConsoleSender().sendMessage(ChatColor.GRAY + "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
         if(!this.getConfig().getString("config-version").equalsIgnoreCase(String.valueOf(0133))){
-            getServer().getConsoleSender().sendMessage(ChatColor.RED + "[OriginsSpigotMC] WARNING. THIS IS THE WRONG CONFIG VERSION. PLEASE RELOAD THE CONFIG OR DELETE THE CONFIG AND RESTART");
-            getServer().getConsoleSender().sendMessage(ChatColor.RED + "[OriginsSpigotMC] RELOADING CONFIG");
+            getServer().getConsoleSender().sendMessage(ChatColor.RED + "[GenesisMC] WARNING. THIS IS THE WRONG CONFIG VERSION. PLEASE RELOAD THE CONFIG OR DELETE THE CONFIG AND RESTART");
+            getServer().getConsoleSender().sendMessage(ChatColor.RED + "[GenesisMC] RELOADING CONFIG");
             this.reloadConfig();
             this.getServer().getScheduler().scheduleSyncRepeatingTask(this, new Runnable() {
                 public void run() {
                     if(getConfig().getString("config-version").equalsIgnoreCase(String.valueOf(0133))){
-                        getServer().getConsoleSender().sendMessage(ChatColor.GREEN + "[OriginsSpigotMC] RELOADING CONFIG SUCCESSFUL");
+                        getServer().getConsoleSender().sendMessage(ChatColor.GREEN + "[GenesisMC] RELOADING CONFIG SUCCESSFUL");
                     } else if (getConfig().getString("config-version") == null || !getConfig().getString("config-version").equalsIgnoreCase(String.valueOf(0133))) {
-                        getServer().getConsoleSender().sendMessage(ChatColor.RED + "[OriginsSpigotMC] ERROR RELOADING CONFIG. PLEASE DELETE CONFIG FILE AND RESTART");
+                        getServer().getConsoleSender().sendMessage(ChatColor.RED + "[GenesisMC] ERROR RELOADING CONFIG. PLEASE DELETE CONFIG FILE AND RESTART");
                     }
                 }
             }, 40, 20);
@@ -63,11 +62,11 @@ public final class OriginsSpigotMC extends JavaPlugin implements Listener {
                         Block b = p.getWorld().getHighestBlockAt(p.getLocation());
                         if (p.getScoreboardTags().contains("enderian")) {
                             if (!this.getTemperature(p.getLocation()).equalsIgnoreCase("Hot") && p.getLocation().getBlockY() + 1 > p.getWorld().getHighestBlockYAt(p.getLocation()) && !p.getWorld().isClearWeather()){
-                                p.damage(2.0 * Bukkit.getPluginManager().getPlugin("originsspigotmc").getConfig().getDouble("enderian-water-damage-multiplier"));
+                                p.damage(2.0 * Bukkit.getPluginManager().getPlugin("GenesisMC").getConfig().getDouble("enderian-water-damage-multiplier"));
                             }
                         }
                         if (p.getScoreboardTags().contains("enderian") && (p.getLocation().getBlock().getType() == Material.WATER || p.getLocation().getBlock().getType() == Material.WATER_BUCKET || p.getLocation().getBlock().getType() == Material.WATER_CAULDRON)) {
-                            p.damage(2.0 * Bukkit.getPluginManager().getPlugin("originsspigotmc").getConfig().getDouble("enderian-water-damage-multiplier"));
+                            p.damage(2.0 * Bukkit.getPluginManager().getPlugin("GenesisMC").getConfig().getDouble("enderian-water-damage-multiplier"));
                         }
                     }
                 }
@@ -89,19 +88,19 @@ public final class OriginsSpigotMC extends JavaPlugin implements Listener {
             }
         }, 0, 5);
         if(this.getConfig().getString("config-version") == null){
-            getServer().getConsoleSender().sendMessage(ChatColor.RED + "[OriginsSpigotMC] ERROR LOADING CONFIG");
+            getServer().getConsoleSender().sendMessage(ChatColor.RED + "[GenesisMC] ERROR LOADING CONFIG");
         }
         if(this.getConfig().getString("console-dump-onstartup").equalsIgnoreCase("true")){
-            getServer().getConsoleSender().sendMessage(ChatColor.GRAY + "[OriginsSpigotMC] Loading API version 0.1.1");
-            getServer().getConsoleSender().sendMessage(ChatColor.GRAY + "[OriginsSpigotMC] Loading Subcommands");
-            getServer().getConsoleSender().sendMessage(ChatColor.GRAY + "[OriginsSpigotMC] Loading HumanMain.class");
-            getServer().getConsoleSender().sendMessage(ChatColor.GRAY + "[OriginsSpigotMC] Loading EnderMain.class");
-            getServer().getConsoleSender().sendMessage(ChatColor.GRAY + "[OriginsSpigotMC] Loading OriginsChoosingCommands");
-            getServer().getConsoleSender().sendMessage(ChatColor.LIGHT_PURPLE + "[OriginsSpigotMC] DUMPING PLUGIN-API FILES:");
+            getServer().getConsoleSender().sendMessage(ChatColor.GRAY + "[GenesisMC] Loading API version 0.1.1");
+            getServer().getConsoleSender().sendMessage(ChatColor.GRAY + "[GenesisMC] Loading Subcommands");
+            getServer().getConsoleSender().sendMessage(ChatColor.GRAY + "[GenesisMC] Loading HumanMain.class");
+            getServer().getConsoleSender().sendMessage(ChatColor.GRAY + "[GenesisMC] Loading EnderMain.class");
+            getServer().getConsoleSender().sendMessage(ChatColor.GRAY + "[GenesisMC] Loading OriginsChoosingCommands");
+            getServer().getConsoleSender().sendMessage(ChatColor.LIGHT_PURPLE + "[GenesisMC] DUMPING PLUGIN-API FILES:");
             getServer().getConsoleSender().sendMessage(ChatColor.GRAY + "Loading config file:" +
                     this.getConfig().getValues(Boolean.parseBoolean("all")));
-            getServer().getConsoleSender().sendMessage(ChatColor.LIGHT_PURPLE + "[OriginsSpigotMC] Loading API");
-            getServer().getConsoleSender().sendMessage(ChatColor.GRAY + "[OriginsSpigotMC] DUMPING SERVER FILES:" +
+            getServer().getConsoleSender().sendMessage(ChatColor.LIGHT_PURPLE + "[GenesisMC] Loading API");
+            getServer().getConsoleSender().sendMessage(ChatColor.GRAY + "[GenesisMC] DUMPING SERVER FILES:" +
                     getServer().getVersion() +
                     getServer().getAllowEnd() +
                     getServer().getAllowNether() +
@@ -117,30 +116,30 @@ public final class OriginsSpigotMC extends JavaPlugin implements Listener {
                     getServer().getHelpMap() +
                     getServer().getPluginManager().getPlugins()
             );
-            getServer().getConsoleSender().sendMessage(ChatColor.GREEN + "[OriginsSpigotMC] Successfully loaded version 0.1.3-SNAPSHOT (1.19.3)");
-            getServer().getConsoleSender().sendMessage(ChatColor.GREEN + "[OriginsSpigotMC] Successfully loaded API version 0.1.1-BETA (1.19.3)");
-            getServer().getConsoleSender().sendMessage(ChatColor.GREEN + "[OriginsSpigotMC] Successfully loaded CONFIG version 0133 (1.19.3)");
+            getServer().getConsoleSender().sendMessage(ChatColor.GREEN + "[GenesisMC] Successfully loaded version 0.1.3-SNAPSHOT (1.19.3)");
+            getServer().getConsoleSender().sendMessage(ChatColor.GREEN + "[GenesisMC] Successfully loaded API version 0.1.1-BETA (1.19.3)");
+            getServer().getConsoleSender().sendMessage(ChatColor.GREEN + "[GenesisMC] Successfully loaded CONFIG version 0133 (1.19.3)");
             if(!this.getConfig().getString("use-purplewolfapi").equalsIgnoreCase(String.valueOf(true))){
-                getServer().getConsoleSender().sendMessage(ChatColor.RED + "[OriginsSpigotMC] WARNGING. PURPLEWOLFAPI IS DISABLED. THINGS WILL BREAK. PLEASE TURN BACK TO TRUE");
+                getServer().getConsoleSender().sendMessage(ChatColor.RED + "[GenesisMC] WARNGING. PURPLEWOLFAPI IS DISABLED. THINGS WILL BREAK. PLEASE TURN BACK TO TRUE");
                 getServer().getPluginManager().getPlugin("origins-spigotmc").reloadConfig();
             }
         }else{
-            getServer().getConsoleSender().sendMessage(ChatColor.GREEN + "[OriginsSpigotMC] Successfully loaded version 0.1.3-SNAPSHOT (1.19.3)");
+            getServer().getConsoleSender().sendMessage(ChatColor.GREEN + "[GenesisMC] Successfully loaded version 0.1.3-SNAPSHOT (1.19.3)");
         }
         if(getServer().getPluginManager().getPlugins().toString().contains("PurpleWolfAPI") || getServer().getPluginManager().isPluginEnabled("PurpleWolfAPI") || getServer().getPluginManager().getPlugin("PurpleWolfAPI") != null){
-            getServer().getConsoleSender().sendMessage(ChatColor.LIGHT_PURPLE + "[OriginsSpigotMC - PurpleWolfAPI] Successfully injected PurpleWolfAPI into plugin");
+            getServer().getConsoleSender().sendMessage(ChatColor.LIGHT_PURPLE + "[GenesisMC - PurpleWolfAPI] Successfully injected PurpleWolfAPI into plugin");
         }else{
             //PurpleWolfAPI not avalible, inject built-in
-            getServer().getConsoleSender().sendMessage(ChatColor.LIGHT_PURPLE + "[OriginsSpigotMC] PurpleWolfAPI not detected. Injecting built-in API");
+            getServer().getConsoleSender().sendMessage(ChatColor.LIGHT_PURPLE + "[GenesisMC] PurpleWolfAPI not detected. Injecting built-in API");
         }
         getServer().getConsoleSender().sendMessage(ChatColor.GRAY + "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 
         getServer().getPluginManager().registerEvents(this, this);
 //Commands
-        getCommand("origins").setExecutor(new OriginsCommandManager());
-        getCommand("origins-op").setExecutor(new OriginsOP());
+        getCommand("origins").setExecutor(new GenesisCommandManager());
+        getCommand("origins-op").setExecutor(new GenesisOP());
 //Event Handler Register
-        getServer().getPluginManager().registerEvents(new OriginsChooseListener(),this);
+        getServer().getPluginManager().registerEvents(new GenesisChooseListener(),this);
         getServer().getPluginManager().registerEvents(new EnderReach(),this);
         getServer().getPluginManager().registerEvents(new EnderTeleport(),this);
         getServer().getPluginManager().registerEvents(new EnderWater(), this);

@@ -1,29 +1,22 @@
-package me.purplewolfmc.originsspigotmc.origins.enderian;
+package me.purplewolfmc.genesismc.origins.enderian;
 
 import org.bukkit.ChatColor;
-import org.bukkit.GameMode;
 import org.bukkit.Material;
 import org.bukkit.Sound;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.EnderPearl;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
-import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
-import org.bukkit.event.block.Action;
 import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.entity.ProjectileLaunchEvent;
 import org.bukkit.event.player.*;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
-import org.bukkit.potion.PotionEffectType;
-import org.bukkit.util.Vector;
 
 import java.util.*;
 
-import static net.md_5.bungee.api.chat.Keybinds.COMMAND;
-import static org.bukkit.Material.ANVIL;
 import static org.bukkit.Material.ENDER_PEARL;
 
 public class EnderTeleport implements Listener {
