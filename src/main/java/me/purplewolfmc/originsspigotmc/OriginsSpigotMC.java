@@ -41,7 +41,7 @@ public final class OriginsSpigotMC extends JavaPlugin implements Listener {
         getServer().getConsoleSender().sendMessage(ChatColor.BLUE + "[OriginsSpigotMC] |     |_|_| |    |  |      |");
         getServer().getConsoleSender().sendMessage(ChatColor.LIGHT_PURPLE + "[OriginsSpigotMC] |           |    |  |      |");
         getServer().getConsoleSender().sendMessage(ChatColor.DARK_PURPLE + "[OriginsSpigotMC] |                   |");
-        getServer().getConsoleSender().sendMessage(ChatColor.GRAY + "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+        getServer().getConsoleSender().sendMessage(ChatColor.GRAY + "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
         if(!this.getConfig().getString("config-version").equalsIgnoreCase(String.valueOf(0133))){
             getServer().getConsoleSender().sendMessage(ChatColor.RED + "[OriginsSpigotMC] WARNING. THIS IS THE WRONG CONFIG VERSION. PLEASE RELOAD THE CONFIG OR DELETE THE CONFIG AND RESTART");
             getServer().getConsoleSender().sendMessage(ChatColor.RED + "[OriginsSpigotMC] RELOADING CONFIG");
@@ -133,7 +133,7 @@ public final class OriginsSpigotMC extends JavaPlugin implements Listener {
             //PurpleWolfAPI not avalible, inject built-in
             getServer().getConsoleSender().sendMessage(ChatColor.LIGHT_PURPLE + "[OriginsSpigotMC] PurpleWolfAPI not detected. Injecting built-in API");
         }
-        getServer().getConsoleSender().sendMessage(ChatColor.GRAY + "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+        getServer().getConsoleSender().sendMessage(ChatColor.GRAY + "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 
         getServer().getPluginManager().registerEvents(this, this);
 //Commands
