@@ -1,0 +1,41 @@
+enderian-spawn-end: false
+#Set true to make people of Enderian origin spawn in the end, set false to make them spawn in the overworld
+#Still in beta, will not work. Default is false.
+enderian-water-damage-multiplier: 1.0
+#Set number to increase or lessen the amount of damage the enderian origin takes from water. Default is 1.0
+#Not working atm lol. working on it for full release
+arachnid-disable: false
+avian-disable: false
+blazeborn-disable: false
+bumblebee-disable: false
+creep-disable: false
+dragon-disable: false
+elytrian-disable: false
+enderian-disable: false
+human-disable: false
+merling-disable: false
+phantom-disable: false
+piglin-disable: false
+rabbit-disable: false
+shulker-disable: false
+slimeling-disable: false
+starborne-disable: false
+vexian-disable: false
+witch-disable: false
+
+disable-origins: false
+update-beta: false
+bukkit-warning: true
+origins-help-command: true
+datapack-install: true
+console-dump-onstartup: false
+ender-reach-beta: false
+#still in beta, might not work or will break
+plugin-detection-for-incompatibilities: true
+use-purplewolfapi: true
+#NEVER TURN TO FALSE. MOST THINGS WILL BREAK.
+enderian-cooldown: 0.0
+config-version: 0133
+#Dont change config version
+cancel-ender-pearl-enderian: true
+
