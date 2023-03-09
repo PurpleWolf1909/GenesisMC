@@ -92,7 +92,7 @@ public final class OriginsSpigotMC extends JavaPlugin implements Listener {
             getServer().getConsoleSender().sendMessage(ChatColor.RED + "[OriginsSpigotMC] ERROR LOADING CONFIG");
         }
         if(this.getConfig().getString("console-dump-onstartup").equalsIgnoreCase("true")){
-            getServer().getConsoleSender().sendMessage(ChatColor.GRAY + "[OriginsSpigotMC] Loading API version 0.1.3");
+            getServer().getConsoleSender().sendMessage(ChatColor.GRAY + "[OriginsSpigotMC] Loading API version 0.1.1");
             getServer().getConsoleSender().sendMessage(ChatColor.GRAY + "[OriginsSpigotMC] Loading Subcommands");
             getServer().getConsoleSender().sendMessage(ChatColor.GRAY + "[OriginsSpigotMC] Loading HumanMain.class");
             getServer().getConsoleSender().sendMessage(ChatColor.GRAY + "[OriginsSpigotMC] Loading EnderMain.class");
@@ -118,7 +118,7 @@ public final class OriginsSpigotMC extends JavaPlugin implements Listener {
                     getServer().getPluginManager().getPlugins()
             );
             getServer().getConsoleSender().sendMessage(ChatColor.GREEN + "[OriginsSpigotMC] Successfully loaded version 0.1.3-SNAPSHOT (1.19.3)");
-            getServer().getConsoleSender().sendMessage(ChatColor.GREEN + "[OriginsSpigotMC] Successfully loaded API version 0.1.3-BETA (1.19.3)");
+            getServer().getConsoleSender().sendMessage(ChatColor.GREEN + "[OriginsSpigotMC] Successfully loaded API version 0.1.1-BETA (1.19.3)");
             getServer().getConsoleSender().sendMessage(ChatColor.GREEN + "[OriginsSpigotMC] Successfully loaded CONFIG version 0133 (1.19.3)");
             if(!this.getConfig().getString("use-purplewolfapi").equalsIgnoreCase(String.valueOf(true))){
                 getServer().getConsoleSender().sendMessage(ChatColor.RED + "[OriginsSpigotMC] WARNGING. PURPLEWOLFAPI IS DISABLED. THINGS WILL BREAK. PLEASE TURN BACK TO TRUE");
