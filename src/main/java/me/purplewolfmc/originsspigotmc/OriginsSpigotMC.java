@@ -131,6 +131,7 @@ public final class OriginsSpigotMC extends JavaPlugin implements Listener {
             getServer().getConsoleSender().sendMessage(ChatColor.LIGHT_PURPLE + "[OriginsSpigotMC - PurpleWolfAPI] Successfully injected PurpleWolfAPI into plugin");
         }else{
             //PurpleWolfAPI not avalible, inject built-in
+            getServer().getConsoleSender().sendMessage(ChatColor.LIGHT_PURPLE + "[OriginsSpigotMC] PurpleWolfAPI not detected. Injecting built-in API");
         }
         getServer().getConsoleSender().sendMessage(ChatColor.GRAY + "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 
