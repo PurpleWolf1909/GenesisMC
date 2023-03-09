@@ -5,9 +5,9 @@ Donation link: https://streamelements.com/PurpleWolfMC/tip
 
 | Download links | API | GenesisMC |
 | -------------- | --- | ---------------- |
-| Downloads: | Unavalible at this time | https://modrinth.com/plugin/originsspigotmc |
+| Downloads: | Unavalible at this time | Unavailable at this time |
 
-
+This is a complete rewrite of the origins mod. Credit to Apace for the original mod, true legend. Thank you for your hard work. This code is entirely different from the original Origins Mod and does not include the functionality of custom origins(yet?)
 
 
 After the full release, more origins will be added. The plugin is still in early beta, so some functionalities are still not working yet. This plugin is 100% open source for all of its versions. This plugin aims to add plugin support to SpigotMC and all forks of that in an extremely detailed an efficient way. If you are wanting the customization of origins like an easy drop in datapack, this plugin currently does not support that. However, if you do want that, I suggest you check out the Origins-Bukkit plugin. This plugin is only for the purpose of an easy drop in plugin for spigot servers without the need of libraries and other external features. This plugin also plans to be fully compatible with tons of other plugins. 
