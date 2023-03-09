@@ -123,11 +123,11 @@ public final class OriginsSpigotMC extends JavaPlugin implements Listener {
             if(!this.getConfig().getString("use-purplewolfapi").equalsIgnoreCase(String.valueOf(true))){
                 getServer().getConsoleSender().sendMessage(ChatColor.RED + "[OriginsSpigotMC] WARNGING. PURPLEWOLFAPI IS DISABLED. THINGS WILL BREAK. PLEASE TURN BACK TO TRUE");
                 getServer().getPluginManager().getPlugin("origins-spigotmc").reloadConfig();
-                            }
+            }
         }else{
             getServer().getConsoleSender().sendMessage(ChatColor.GREEN + "[OriginsSpigotMC] Successfully loaded version 0.1.3-SNAPSHOT (1.19.3)");
         }
-        if(getServer().getPluginManager().getPlugins().equals("purplewolfapi")){
+        if(getServer().getPluginManager().getPlugins().equals("PurpleWolfAPI")){
             getServer().getConsoleSender().sendMessage(ChatColor.LIGHT_PURPLE + "[OriginsSpigotMC - PurpleWolfAPI] Successfully injected PurpleWolfAPI into plugin");
         }else{
             //PurpleWolfAPI not avalible, inject built-in
