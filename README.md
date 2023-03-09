@@ -1,11 +1,11 @@
-# Origins-SpigotMC 
+# GenesisMC 
 
 This is the SpigotMC origins plugin made my PurpleWolfMC! 
 Donation link: https://streamelements.com/PurpleWolfMC/tip
 
-| Download links | API | Origins-SpigotMC |
+| Download links | API | GenesisMC |
 | -------------- | --- | ---------------- |
-| Downloads: | https://modrinth.com/plugin/purplewolfapi | https://modrinth.com/plugin/originsspigotmc |
+| Downloads: | Unavalible at this time | https://modrinth.com/plugin/originsspigotmc |
 
 
 
