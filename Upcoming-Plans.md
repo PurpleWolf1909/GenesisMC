@@ -10,10 +10,8 @@ I can make it. I also have school lol so I can't work on it all the time
 
 | Plans 0.1.3 | Completed |
 | ----- | --------- |
-| fix enderian detection bugs | Todo |
-| util method for gui menus | Todo |
 | fix water damage multiplier | In progress |
-| pumpkin damage enderian | Todo |
 | /origins reload command | Todo |
+| orb of origins recipe | Todo |
 
 hey cool idea, custom inventory menu without creating a custom one with a name at the top, use tabs like the creative menu to switch between them. probably something for 0.1.4 or 0.1.5
