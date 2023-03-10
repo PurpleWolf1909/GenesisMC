@@ -1,6 +1,8 @@
 package me.purplewolfmc.genesismc.commands;
 
 import me.purplewolfmc.genesismc.commands.subcommands.GenesisChoosing;
+import me.purplewolfmc.genesismc.commands.subcommands.GenesisHelp;
+import me.purplewolfmc.genesismc.commands.subcommands.Purge;
 import me.purplewolfmc.genesismc.commands.subcommands.SubCommand;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -16,6 +18,8 @@ public class GenesisCommandManager implements CommandExecutor {
     private ArrayList<SubCommand> subCommands = new ArrayList<>();
     public GenesisCommandManager(){
         subCommands.add(new GenesisChoosing());
+        subCommands.add(new Purge());
+        subCommands.add(new GenesisHelp());
     }
 
     @Override

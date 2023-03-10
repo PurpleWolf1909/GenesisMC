@@ -8,13 +8,8 @@ Disclamer - not all feature requests will be added. I dont have the time or reso
 mean it isnt a priority. I will of course work on this a lot on the weekends to try and make everything the best
 I can make it. I also have school lol so I can't work on it all the time
 
-| Plans | Completed |
-| ----- | --------- |
-| fix enderian detection bugs | Todo |
-| util method for gui menus | Todo |
-| add Terra biome support(temp check?) | In progress |
-| add PurpleWolfAPI plugin inject | Todo |
-| add idle player BukkitRunnable | In progress |
-| fix water damage multiplier | In progress |
-| pumpkin damage enderian | Todo |
-| /origins reload command | Todo |
+| Plans 0.1.3 | Completed                             |
+|-------------|---------------------------------------|
+| done        | fixed some stuff and added some stuff |
+
+hey cool idea, custom inventory menu without creating a custom one with a name at the top, use tabs like the creative menu to switch between them. probably something for 0.1.4 or 0.1.5

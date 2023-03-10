@@ -8,6 +8,7 @@ import org.bukkit.entity.EnderPearl;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.block.Action;
 import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.entity.ProjectileLaunchEvent;
 import org.bukkit.event.player.*;
@@ -50,15 +51,20 @@ public class EnderTeleport implements Listener {
         infinpearl.setItemMeta(pearl_meta);
         Player p = (Player) e.getPlayer();
         if (p.getScoreboardTags().contains("enderian")) {
-            if (e.getItem().equals(infinpearl)) {
-                p.getInventory().addItem(infinpearl);
+            if (e.getAction() == Action.RIGHT_CLICK_AIR || e.getAction() == Action.LEFT_CLICK_AIR || e.getAction() == Action.LEFT_CLICK_BLOCK || e.getAction() == Action.RIGHT_CLICK_BLOCK) {
+                if (e.getItem() != null) {
+                    if (e.getItem().equals(infinpearl)) {
+                        p.getInventory().addItem(infinpearl);
+                    } else if (e.getItem().equals(null)) {
+                    }
+                }
+            } else if (e.getItem().equals(infinpearl)) {
+                p.getInventory().removeItem(infinpearl);
             } else if (e.getItem().equals(null)) {
             }
-        } else if (e.getItem().equals(infinpearl)) {
-            p.getInventory().removeItem(infinpearl);
-        } else if (e.getItem().equals(null)) {
         }
     }
+
 
     @EventHandler
     public void onThrowCheck(final PlayerInteractEvent e) {

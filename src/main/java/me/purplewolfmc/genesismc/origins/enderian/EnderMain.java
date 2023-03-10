@@ -7,6 +7,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.PlayerDeathEvent;
+import org.bukkit.event.player.PlayerItemConsumeEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.inventory.ItemStack;
@@ -16,13 +17,20 @@ import java.util.Random;
 
 public class EnderMain implements Listener {
     @EventHandler
-    public void onEvent(PlayerMoveEvent e) {
+    public void onMovement(PlayerMoveEvent e) {
         Player p = (Player) e.getPlayer();
         if (p.getScoreboardTags().contains("enderian")) {
             if (p.getActivePotionEffects().equals(PotionEffectType.INVISIBILITY)) {
                 //do nothing
             } else {
                 p.spawnParticle(Particle.PORTAL, p.getLocation(), 2);
+            }
+
+            Random random = new Random();
+
+            int r = random.nextInt(3000);
+            if (r == (int) 3 || r == (int) 9 || r == (int) 11 || r == (int) 998 || r == (int) 2279 || r == (int) 989) {
+                p.playSound(p.getLocation(), Sound.ENTITY_ENDERMAN_AMBIENT, 10, 9);
             }
             p.setMaximumAir(2);
             p.setHealthScale(24);
@@ -41,19 +49,6 @@ public class EnderMain implements Listener {
             p.setMaximumAir(2);
             p.playSound(p.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 10, 9);
             p.setHealthScale(24);
-        }
-    }
-    @EventHandler
-    public void randomNoise(PlayerMoveEvent e) {
-        Player p = (Player) e.getPlayer();
-        if (p.getScoreboardTags().contains("enderian")) {
-
-            Random random = new Random();
-
-            int r = random.nextInt(3000);
-            if (r == (int) 3 || r == (int) 9 || r == (int) 11 || r == (int) 998 || r == (int) 2279 || r == (int) 989) {
-                p.playSound(p.getLocation(), Sound.ENTITY_ENDERMAN_AMBIENT, 10, 9);
-            }
         }
     }
 
@@ -83,6 +78,16 @@ public class EnderMain implements Listener {
 
         if (p.getScoreboardTags().contains("enderian")) {
             p.playSound(p.getLocation(), Sound.ENTITY_ENDERMAN_DEATH, 10, 5);
+        }
+    }
+
+    @EventHandler
+    public void onEat(PlayerItemConsumeEvent e){
+        Player p = (Player) e.getPlayer();
+        if (p.getScoreboardTags().contains("enderian")) {
+            if(e.getItem().getType().equals(Material.PUMPKIN_PIE)){
+                p.damage(16);
+            }
         }
     }
 

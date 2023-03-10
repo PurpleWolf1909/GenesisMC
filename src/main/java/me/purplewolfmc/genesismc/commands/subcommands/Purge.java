@@ -17,12 +17,13 @@ public class Purge extends SubCommand implements Listener {
 
     @Override
     public String getSyntax() {
-        return "/origins-op purge <player>";
+        return "/origins purge <player>";
     }
 
     @Override
     public void perform(Player p, String[] args) {
-            if (args.length > 1){
+        if (p.hasPermission("genesismc.origins.purge")) {
+            if (args.length > 1) {
                 Player target = Bukkit.getPlayer(args[1]);
                 p.sendMessage("Removed origin of " + target.getDisplayName());
                 target.getScoreboardTags().remove("chosen");
@@ -47,5 +48,6 @@ public class Purge extends SubCommand implements Listener {
 
                 target.sendMessage("Your origin has been removed by an operator");
             }
+        }
     }
 }

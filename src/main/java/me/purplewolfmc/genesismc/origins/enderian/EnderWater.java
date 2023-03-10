@@ -18,15 +18,6 @@ public class EnderWater implements Listener {
     }
     public static int baseTemperature = 0;
 
-    @EventHandler
-    public void onPlayerMove(PlayerMoveEvent e) {
-        Player p = e.getPlayer();
-        if (e.getPlayer().getScoreboardTags().contains("enderian") && (e.getPlayer().getLocation().getBlock().getType() == Material.WATER || e.getPlayer().getLocation().getBlock().getType() == Material.WATER_BUCKET || e.getPlayer().getLocation().getBlock().getType() == Material.WATER_CAULDRON)) {
-            p.damage(2.0 * Bukkit.getPluginManager().getPlugin("originsspigotmc").getConfig().getDouble("enderian-water-damage-multiplier"));
-        }
-
-    }
-
 
     @EventHandler
     public void onDeathWeather(PlayerDeathEvent e) {

@@ -2,8 +2,8 @@ package me.purplewolfmc.genesismc;
 
 import me.purplewolfmc.genesismc.commands.BetaCommands;
 import me.purplewolfmc.genesismc.commands.GenesisCommandManager;
-import me.purplewolfmc.genesismc.commands.GenesisOP;
 import me.purplewolfmc.genesismc.commands.subcommands.GenesisChooseListener;
+import me.purplewolfmc.genesismc.commands.subcommands.GenesisHelp;
 import me.purplewolfmc.genesismc.commands.subcommands.Purge;
 import me.purplewolfmc.genesismc.items.OrbOfOrigins;
 import me.purplewolfmc.genesismc.items.OrbofOriginsListener;
@@ -137,7 +137,6 @@ public final class GenesisMC extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(this, this);
 //Commands
         getCommand("origins").setExecutor(new GenesisCommandManager());
-        getCommand("origins-op").setExecutor(new GenesisOP());
 //Event Handler Register
         getServer().getPluginManager().registerEvents(new GenesisChooseListener(),this);
         getServer().getPluginManager().registerEvents(new EnderReach(),this);
@@ -147,6 +146,7 @@ public final class GenesisMC extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new EnderMain(), this);
         getServer().getPluginManager().registerEvents(new Purge(), this);
         getServer().getPluginManager().registerEvents(new OrbofOriginsListener(), this);
+        getServer().getPluginManager().registerEvents(new GenesisHelp(), this);
         if(this.getConfig().getString("update-beta").equalsIgnoreCase("true")){
             getCommand("beta").setExecutor(new BetaCommands());
         }
