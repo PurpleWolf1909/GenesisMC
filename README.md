@@ -13,7 +13,7 @@ This is a complete rewrite of the origins mod. Credit to Apace for the original 
 <tr>
 <td>Downloads:</td>
 <td>Unavalible at this time</td>
-<td>Unavailable at this time</td>
+<td>https://modrinth.com/plugin/genesismc</td>
 </tr>
 </tbody>
 </table><hr>
